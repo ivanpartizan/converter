@@ -36,7 +36,7 @@ header h1 {
 
 main {
   display: flex;
-  width: 80%;
+  width: 55%;
   margin: 0 auto;
   margin-top: 2vh;
 }
@@ -47,6 +47,7 @@ main {
 }
 
 button {
+  width: 10vw;
   padding: 2vh;
   margin: 1vh;
   background: #f7f7f8;
@@ -76,4 +77,104 @@ button.active {
 
 .content div.active {
   display: block;
+}
+
+.content > div {
+  margin-top: 1vh;
+}
+
+input {
+  width: 33vw;
+  padding: 2%;
+  border: 1px solid #06f;
+  border-radius: 10px;
+  outline: none;
+}
+
+.input-label {
+  margin-left: 0;
+  padding: 1%;
+  background: #06f;
+  color: #fff;
+  width: 2vw;
+  border-radius: 10px;
+  outline: none;
+  text-align: center;
+}
+
+input:focus {
+  border: none;
+}
+
+::placeholder {
+  color: #06f;
+}
+
+/* .length > label {
+  grid-area: label;
+}
+
+.length > input {
+  grid-area: input;
+} */
+
+/* .input-label {
+  position: absolute;
+  right: 0;
+  background-color: #efefef;
+  border: solid 1px #999;
+  height: 32px;
+  padding: 2px 8px 2px 8px;
+  box-sizing: border-box;
+  border-radius: 0 4px 4px 0;
+  font-weight: bold;
+} */
+
+@media only screen and (max-width: 1600px) {
+  main {
+    width: 75%;
+  }
+
+  .input-label {
+    width: 5vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  main {
+    width: 80%;
+  }
+
+  button {
+    width: 20vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  main {
+    width: 90%;
+  }
+
+  input {
+    width: 50vw;
+  }
+
+  button {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    width: 100%;
+  }
+
+  button {
+    width: 24vw;
+    font-size: 18px;
+  }
+
+  .input-label {
+    width: 8vw;
+  }
 }
