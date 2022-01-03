@@ -104,6 +104,8 @@ input {
 
 input:focus {
   border: none;
+  border: 1px solid rgb(0, 200, 255);
+  border: 1px solid black;
 }
 
 ::placeholder {
