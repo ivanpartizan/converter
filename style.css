@@ -10,6 +10,7 @@ body {
   background: #fff;
   color: #000;
   font-family: "Cabin", sans-serif;
+  background: #101820;
 }
 
 header {
@@ -20,6 +21,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #101820;
+  background: #fee715;
 }
 
 header h1 {
@@ -37,6 +40,7 @@ header h1 {
 main {
   display: flex;
   width: 55%;
+  /* width: 85%; */
   margin: 0 auto;
   margin-top: 2vh;
 }
@@ -59,16 +63,24 @@ button {
   outline: none;
   transition: all 0.5s ease-in;
   cursor: pointer;
+  background: #fee715;
 }
 
 button:hover {
   background: #06f;
   color: #fff;
+  background: #fee715;
+  background: white;
+  color: #000;
 }
 
 button.active {
   background: #06f;
   color: #fff;
+  background: #fee715;
+  background: rgba(254, 231, 21, 0.33);
+  background: white;
+  color: #000;
 }
 
 .content div {
@@ -87,8 +99,10 @@ input {
   width: 33vw;
   padding: 2%;
   border: 1px solid #06f;
+  border: 1px solid rgb(254, 231, 21);
   border-radius: 10px;
   outline: none;
+  /* width: 100%; */
 }
 
 .input-label {
@@ -100,16 +114,20 @@ input {
   border-radius: 10px;
   outline: none;
   text-align: center;
+  background: #fee715;
+  color: #000;
 }
 
 input:focus {
   border: none;
   border: 1px solid rgb(0, 200, 255);
   border: 1px solid black;
+  border: 1px solid rgb(254, 231, 21);
 }
 
 ::placeholder {
   color: #06f;
+  color: #101820;
 }
 
 /* .length > label {
@@ -133,22 +151,27 @@ input:focus {
 } */
 
 @media only screen and (max-width: 1600px) {
-  main {
+  /* main {
     width: 75%;
-  }
+    width: 100%;
+    margin: 0 auto;
+  } */
 
   .input-label {
-    width: 5vw;
+    width: 4vw;
   }
 }
 
 @media only screen and (max-width: 1200px) {
   main {
     width: 80%;
+    display: flex;
+    justify-content: center;
   }
 
   button {
     width: 20vw;
+    text-align: left;
   }
 }
 
@@ -159,6 +182,10 @@ input:focus {
 
   input {
     width: 50vw;
+  }
+
+  .input-label {
+    width: 6vw;
   }
 
   button {
@@ -172,7 +199,7 @@ input:focus {
   }
 
   button {
-    width: 24vw;
+    /* width: 20vw; */
     font-size: 18px;
   }
 
