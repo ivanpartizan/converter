@@ -17,6 +17,180 @@ function round(number) {
   return Math.round(number * 100) / 100;
 }
 
+// Length
+let km = document.querySelector("#km");
+let m = document.querySelector("#m");
+let cm = document.querySelector("#cm");
+let mm = document.querySelector("#mm");
+let miles = document.querySelector("#miles");
+let yards = document.querySelector("#yards");
+let feet = document.querySelector("#feet");
+let inches = document.querySelector("#inches");
+
+function fromKm() {
+  let kmValue = +km.value;
+  m.value = kmValue * 1000;
+  cm.value = kmValue * 100000;
+  mm.value = kmValue * 1000000;
+  miles.value = round(kmValue * 0.621371192);
+  yards.value = round(kmValue * 1093.6133);
+  feet.value = round(kmValue * 3280.8399);
+  inches.value = round(kmValue * 39370.0787);
+}
+
+function fromM() {
+  let mValue = +m.value;
+  km.value = mValue / 1000;
+  cm.value = mValue * 100;
+  mm.value = mValue * 1000;
+  miles.value = round(mValue * 0.000621371192);
+  yards.value = round(mValue * 1.0936133);
+  feet.value = round(mValue * 3.2808399);
+  inches.value = round(mValue * 39.3700787);
+}
+
+function fromCm() {
+  let cmValue = +cm.value;
+  km.value = cmValue / 100000;
+  m.value = cmValue / 100;
+  mm.value = cmValue * 10;
+  miles.value = round(cmValue / 160934.4);
+  yards.value = round(cmValue * 0.010936133);
+  feet.value = round(cmValue * 0.032808399);
+  inches.value = round(cmValue * 0.393700787);
+}
+
+function fromMm() {
+  let mmValue = +mm.value;
+  km.value = mmValue / 1000000;
+  m.value = mmValue / 1000;
+  cm.value = mmValue / 10;
+  miles.value = round(mmValue / 1609344);
+  yards.value = round(mmValue * 0.0010936133);
+  feet.value = round(mmValue * 0.0032808399);
+  inches.value = round(mmValue * 0.0393700787);
+}
+
+function fromMiles() {
+  let milesValue = +miles.value;
+  km.value = round(milesValue / 0.621371192);
+  m.value = round(milesValue / 0.000621371192);
+  cm.value = round(milesValue * 160934.4);
+  mm.value = round(milesValue * 1609344);
+  yards.value = round(milesValue * 1760);
+  feet.value = round(milesValue * 5280);
+  inches.value = round(milesValue * 63360);
+}
+
+function fromYards() {
+  let yardsValue = +yards.value;
+  km.value = round(yardsValue / 1093.6133);
+  m.value = round(yardsValue / 1.0936133);
+  cm.value = round(yardsValue / 0.010936133);
+  mm.value = round(yardsValue / 0.0010936133);
+  miles.value = round(yardsValue / 1760);
+  feet.value = round(yardsValue / 0.333333333);
+  inches.value = round(yardsValue / 0.0277777778);
+}
+
+function fromFeet() {
+  let feetValue = +feet.value;
+  km.value = round(feetValue / 3280.8399);
+  m.value = round(feetValue / 3.2808399);
+  cm.value = round(feetValue / 0.032808399);
+  mm.value = round(feetValue / 0.0032808399);
+  miles.value = round(feetValue * 0.000189393939);
+  yards.value = round(feetValue * 0.333333333);
+  inches.value = round(feetValue * 12);
+}
+
+function fromInches() {
+  let inchesValue = +inches.value;
+  km.value = round(inchesValue / 39370.0787);
+  m.value = round(inchesValue / 39.3700787);
+  cm.value = round(inchesValue / 0.393700787);
+  mm.value = round(inchesValue / 0.0393700787);
+  miles.value = round(inchesValue / 63360);
+  yards.value = round(inchesValue * 0.0277777778);
+  feet.value = round(inchesValue / 12);
+}
+
+km.addEventListener("input", fromKm);
+m.addEventListener("input", fromM);
+cm.addEventListener("input", fromCm);
+mm.addEventListener("input", fromMm);
+miles.addEventListener("input", fromMiles);
+yards.addEventListener("input", fromYards);
+feet.addEventListener("input", fromFeet);
+inches.addEventListener("input", fromInches);
+
+// Area
+let hectares = document.querySelector("#hectares");
+let acres = document.querySelector("#acres");
+let sqkm = document.querySelector("#sqkm");
+let sqm = document.querySelector("#sqm");
+let sqcm = document.querySelector("#sqcm");
+let sqmi = document.querySelector("#sqmi");
+let sqy = document.querySelector("#sqy");
+
+function fromHectares() {
+  let hectaresValue = +hectares.value;
+  acres.value = round(hectaresValue * 2.47105381);
+  sqkm.value = round(hectaresValue * 0.01);
+  sqm.value = round(hectaresValue * 10000);
+  sqcm.value = round(hectaresValue * 100000000);
+  sqmi.value = round(hectaresValue * 0.0038610216);
+  sqy.value = round(hectaresValue * 11959.900463011);
+}
+
+function fromAcres() {
+  let acresValue = +acres.value;
+  hectares.value = round(acresValue * 0.404685642);
+  sqkm.value = round(acresValue * 0.00404685642);
+  sqm.value = round(acresValue * 4046.85642);
+  sqcm.value = round(acresValue * 40468564.2);
+  sqmi.value = round(acresValue * 0.0015625);
+  sqy.value = round(acresValue * 4840);
+}
+
+function fromSqkm() {
+  let sqkmValue = +sqkm.value;
+  hectares.value = round(sqkmValue * 100);
+  acres.value = round(sqkmValue * 247.105381);
+  sqm.value = round(sqkmValue * 1000000);
+  sqcm.value = round(sqkmValue * 10000000000);
+  sqmi.value = round(sqkmValue * 0.386102159);
+  sqy.value = round(sqkmValue * 1195990.05);
+}
+
+function fromSqm() {
+  let sqmValue = +sqm.value;
+  hectares.value = round(sqmValue * 0.0001);
+  acres.value = round(sqmValue * 0.000247105381);
+  sqkm.value = round(sqmValue / 1000000);
+  sqcm.value = round(sqmValue * 10000);
+  sqmi.value = round(sqmValue * 0.0000003861);
+  sqy.value = round(sqmValue * 1.19599005);
+}
+
+function fromSqcm() {
+  let sqcmValue = +sqcm.value;
+  hectares.value = round(sqcmValue / 100000000);
+  acres.value = round(sqcmValue / 40468564.2);
+  sqkm.value = round(sqcmValue / 10000000000);
+  sqm.value = round(sqcmValue / 10000);
+  sqmi.value = round(sqcmValue * 0.00000000003861);
+  sqy.value = round(sqcmValue * 0.0001196);
+}
+
+hectares.addEventListener("input", fromHectares);
+acres.addEventListener("input", fromAcres);
+sqkm.addEventListener("input", fromSqkm);
+sqm.addEventListener("input", fromSqm);
+sqcm.addEventListener("input", fromSqcm);
+sqmi.addEventListener("input", fromSqmi);
+sqy.addEventListener("input", fromSqy);
+
 // Temp
 let celsius = document.querySelector("#celsius");
 let fahrenheit = document.querySelector("#fahrenheit");
