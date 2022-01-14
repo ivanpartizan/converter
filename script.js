@@ -183,6 +183,26 @@ function fromSqcm() {
   sqy.value = round(sqcmValue * 0.0001196);
 }
 
+function fromSqmi() {
+  let sqmiValue = +sqmi.value;
+  hectares.value = round(sqmiValue * 258.998811);
+  acres.value = round(sqmiValue * 640);
+  sqkm.value = round(sqmiValue * 2.58998811);
+  sqm.value = round(sqmiValue * 2589988.11);
+  sqcm.value = round(sqmiValue * 2.58998811 * Math.pow(10, 10));
+  sqy.value = round(sqmiValue * 3097600);
+}
+
+function fromSqy() {
+  let sqyValue = +sqy.value;
+  hectares.value = round(sqyValue / 11959.900463011);
+  acres.value = round(sqyValue / 4840);
+  sqkm.value = round(sqyValue / 1195990.05);
+  sqm.value = round(sqyValue / 1.19599005);
+  sqcm.value = round(sqyValue * 8361.2736);
+  sqmi.value = round(sqyValue / 3097600);
+}
+
 hectares.addEventListener("input", fromHectares);
 acres.addEventListener("input", fromAcres);
 sqkm.addEventListener("input", fromSqkm);
@@ -190,6 +210,93 @@ sqm.addEventListener("input", fromSqm);
 sqcm.addEventListener("input", fromSqcm);
 sqmi.addEventListener("input", fromSqmi);
 sqy.addEventListener("input", fromSqy);
+
+// Weight
+let tons = document.querySelector("#tons");
+let kilograms = document.querySelector("#kilograms");
+let grams = document.querySelector("#grams");
+let milligrams = document.querySelector("#milligrams");
+let micrograms = document.querySelector("#micrograms");
+let pounds = document.querySelector("#pounds");
+let ounces = document.querySelector("#ounces");
+
+function fromTons() {
+  let tonsValue = +tons.value;
+  kilograms.value = round(tonsValue * 1000);
+  grams.value = round(tonsValue * 1000000);
+  milligrams.value = round(tonsValue * 1000000000);
+  micrograms.value = round(tonsValue * 1000000000000);
+  pounds.value = round(tonsValue * 2204.62262);
+  ounces.value = round(tonsValue * 35273.9619);
+}
+
+function fromKilograms() {
+  let kilogramsValue = +kilograms.value;
+  tons.value = round(kilogramsValue / 1000);
+  grams.value = round(kilogramsValue * 1000);
+  milligrams.value = round(kilogramsValue * 1000000);
+  micrograms.value = round(kilogramsValue * 1000000000);
+  pounds.value = round(kilogramsValue * 2.20462262);
+  ounces.value = round(kilogramsValue * 35.2739619);
+}
+
+function fromGrams() {
+  let gramsValue = +grams.value;
+  tons.value = round(gramsValue / 1000000);
+  kilograms.value = round(gramsValue / 1000);
+  milligrams.value = round(gramsValue * 1000);
+  micrograms.value = round(gramsValue * 1000000);
+  pounds.value = round(gramsValue * 0.00220462262);
+  ounces.value = round(gramsValue * 0.0352739619);
+}
+
+function fromMilligrams() {
+  let milligramsValue = +milligrams.value;
+  tons.value = round(milligramsValue / 1000000000);
+  kilograms.value = round(milligramsValue / 1000000);
+  grams.value = round(milligramsValue / 1000);
+  micrograms.value = round(milligramsValue * 1000);
+  pounds.value = round(milligramsValue / 453592.37);
+  ounces.value = round(milligramsValue / 28349.5231);
+}
+
+function fromMicrograms() {
+  let microgramsValue = +micrograms.value;
+  tons.value = round(microgramsValue / 1000000000000);
+  kilograms.value = round(microgramsValue / 1000000000);
+  grams.value = round(microgramsValue / 1000000);
+  milligrams.value = round(microgramsValue / 1000);
+  pounds.value = round(microgramsValue / 453592370);
+  ounces.value = round(microgramsValue / 28349523.1);
+}
+
+function fromPounds() {
+  let poundsValue = +pounds.value;
+  tons.value = round(poundsValue / 2204.62262);
+  kilograms.value = round(poundsValue / 2.20462262);
+  grams.value = round(poundsValue / 0.00220462262);
+  milligrams.value = round(poundsValue * 453592.37);
+  micrograms.value = round(poundsValue * 453592370);
+  ounces.value = round(poundsValue * 16);
+}
+
+function fromOunces() {
+  let ouncesValue = +ounces.value;
+  tons.value = round(ouncesValue / 35273.9619);
+  kilograms.value = round(ouncesValue / 35.2739619);
+  grams.value = round(ouncesValue * 28.3495231);
+  milligrams.value = round(ouncesValue * 28349.5231);
+  micrograms.value = round(ouncesValue * 28349523.1);
+  pounds.value = round(ouncesValue / 16);
+}
+
+tons.addEventListener("input", fromTons);
+kilograms.addEventListener("input", fromKilograms);
+grams.addEventListener("input", fromGrams);
+milligrams.addEventListener("input", fromMilligrams);
+micrograms.addEventListener("input", fromMicrograms);
+pounds.addEventListener("input", fromPounds);
+ounces.addEventListener("input", fromOunces);
 
 // Temp
 let celsius = document.querySelector("#celsius");
