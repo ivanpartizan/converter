@@ -453,3 +453,64 @@ minutes.addEventListener("input", fromMinutes);
 seconds.addEventListener("input", fromSeconds);
 milliseconds.addEventListener("input", fromMilliseconds);
 microseconds.addEventListener("input", fromMicroseconds);
+
+let lengthBtn = document.querySelector("#lengthButton");
+let areaBtn = document.querySelector("#areaButton");
+let weightBtn = document.querySelector("#weightButton");
+let tempBtn = document.querySelector("#tempButton");
+let timeBtn = document.querySelector("#timeButton");
+
+function clearLength() {
+  km.value = "";
+  m.value = "";
+  cm.value = "";
+  mm.value = "";
+  miles.value = "";
+  yards.value = "";
+  feet.value = "";
+  inches.value = "";
+}
+
+function clearArea() {
+  hectares.value = "";
+  acres.value = "";
+  sqkm.value = "";
+  sqm.value = "";
+  sqcm.value = "";
+  sqmi.value = "";
+  sqy.value = "";
+}
+
+function clearWeight() {
+  tons.value = "";
+  kilograms.value = "";
+  grams.value = "";
+  milligrams.value = "";
+  micrograms.value = "";
+  pounds.value = "";
+  ounces.value = "";
+}
+
+function clearTemp() {
+  celsius.value = "";
+  fahrenheit.value = "";
+  kelvin.value = "";
+}
+
+function clearTime() {
+  years.value = "";
+  months.value = "";
+  weeks.value = "";
+  days.value = "";
+  hours.value = "";
+  minutes.value = "";
+  seconds.value = "";
+  milliseconds.value = "";
+  microseconds.value = "";
+}
+
+lengthBtn.addEventListener("click", clearLength);
+areaBtn.addEventListener("click", clearArea);
+weightBtn.addEventListener("click", clearWeight);
+tempBtn.addEventListener("click", clearTemp);
+timeBtn.addEventListener("click", clearTime);

@@ -66,6 +66,13 @@ button {
   background: #fee715;
 }
 
+.clearButton {
+  padding: 1vh;
+  width: fit-content;
+  font-size: 15px;
+  text-align: center;
+}
+
 button:hover {
   background: #06f;
   color: #fff;
